@@ -1,0 +1,221 @@
+[
+  {
+    "model": "SportsSalesApp.order",
+    "pk": 1,
+    "fields": {
+      "user": 1,
+      "date": "2026-04-07",
+      "status": "Pending"
+    }
+  },
+  {
+    "model": "SportsSalesApp.order",
+    "pk": 2,
+    "fields": {
+      "user": 2,
+      "date": "2026-04-07",
+      "status": "Completed"
+    }
+  },
+  {
+    "model": "SportsSalesApp.order",
+    "pk": 3,
+    "fields": {
+      "user": 3,
+      "date": "2026-04-07",
+      "status": "Cancelled"
+    }
+  },
+  {
+    "model": "SportsSalesApp.order",
+    "pk": 4,
+    "fields": {
+      "user": 4,
+      "date": "2026-04-07",
+      "status": "Shipping"
+    }
+  },
+  {
+    "model": "SportsSalesApp.order",
+    "pk": 5,
+    "fields": {
+      "user": 5,
+      "date": "2026-04-07",
+      "status": "Pending"
+    }
+  },
+
+
+
+  {
+    "model": "SportsSalesApp.item",
+    "pk": 1,
+    "fields": {
+      "name": "Football",
+      "price": 1.90,
+      "description": "This is a Gaelic football"
+    }
+  },
+  {
+    "model": "SportsSalesApp.item",
+    "pk": 2,
+    "fields": {
+      "name": "Basketball",
+      "price": 3.60,
+      "description": "This is a basketball"
+    }
+  },
+  {
+    "model": "SportsSalesApp.item",
+    "pk": 3,
+    "fields": {
+      "name": "Jersey",
+      "price": 5.10,
+      "description": "This is a football jersey"
+    }
+  },
+  {
+    "model": "SportsSalesApp.item",
+    "pk": 4,
+    "fields": {
+      "name": "Hurl",
+      "price": 7.90,
+      "description": "This is a hurl"
+    }
+  },
+  {
+    "model": "SportsSalesApp.item",
+    "pk": 5,
+    "fields": {
+      "name": "Sliotar",
+      "price": 9.00,
+      "description": "This is a sliotar"
+    }
+  },
+
+
+
+  {
+    "model": "SportsSalesApp.orderitem",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "item": 1,
+      "quantity": 2
+    }
+  },
+  {
+    "model": "SportsSalesApp.orderitem",
+    "pk": 2,
+    "fields": {
+      "order": 1,
+      "item": 2,
+      "quantity": 4
+    }
+  },
+  {
+    "model": "SportsSalesApp.orderitem",
+    "pk": 3,
+    "fields": {
+      "order": 2,
+      "item": 3,
+      "quantity": 6
+    }
+  },
+  {
+    "model": "SportsSalesApp.orderitem",
+    "pk": 4,
+    "fields": {
+      "order": 2,
+      "item": 4,
+      "quantity": 8
+    }
+  },
+  {
+    "model": "SportsSalesApp.orderitem",
+    "pk": 5,
+    "fields": {
+      "order": 5,
+      "item": 5,
+      "quantity": 10
+    }
+  },
+
+
+  {
+    "model": "SportsSalesApp.role",
+    "pk": 1,
+    "fields": {
+      "name": "admin"
+    }
+  },
+  {
+    "model": "SportsSalesApp.role",
+    "pk": 2,
+    "fields": {
+      "name": "manager"
+    }
+  },
+  {
+    "model": "SportsSalesApp.role",
+    "pk": 3,
+    "fields": {
+      "name": "staff"
+    }
+  },
+  {
+    "model": "SportsSalesApp.role",
+    "pk": 4,
+    "fields": {
+      "name": "customer"
+    }
+  },
+
+
+
+  {
+    "model": "SportsSalesApp.payment",
+    "pk": 1,
+    "fields": {
+      "order": 1,
+      "type": "Card",
+      "status": "Pending"
+    }
+  },
+  {
+    "model": "SportsSalesApp.payment",
+    "pk": 2,
+    "fields": {
+      "order": 2,
+      "type": "Cash",
+      "status": "Completed"
+    }
+  },
+  {
+    "model": "SportsSalesApp.payment",
+    "pk": 3,
+    "fields": {
+      "order": 3,
+      "type": "Card",
+      "status": "Cancelled"
+    }
+  },
+    {
+    "model": "SportsSalesApp.payment",
+    "pk": 4,
+    "fields": {
+      "order": 4,
+      "type": "Card",
+      "status": "Completed"
+    }
+  },
+  {
+    "model": "SportsSalesApp.payment",
+    "pk": 5,
+    "fields": {
+      "order": 5,
+      "type": "Cash",
+      "status": "Pending"
+    }
+  }
+]

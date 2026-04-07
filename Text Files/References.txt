@@ -1,0 +1,13 @@
+References:
+
+1. Django Documentation | Writing your first Django app, part 1
+	-> https://docs.djangoproject.com/en/6.0/intro/tutorial01/
+
+2. Django Documentation | Models
+	-> https://docs.djangoproject.com/en/6.0/intro/tutorial02/
+
+3. Django Documentation | django.contrib.auth
+	-> https://docs.djangoproject.com/en/6.0/ref/contrib/auth/
+
+4. Django Documentation | django-admin and manage.py
+	-> https://docs.djangoproject.com/en/6.0/ref/django-admin/#django-admin-dumpdata

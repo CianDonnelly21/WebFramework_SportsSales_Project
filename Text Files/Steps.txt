@@ -1,0 +1,77 @@
+Steps:
+
+1. Created Repo 'WebFramework_SportsSales_Project'
+
+2. Published Repo
+
+3. CMD into repo and started a project
+	-> django-admin startproject SportsSales
+
+4. Cd'd into SportsSales folder
+	-> cd SportsSales
+
+5. Started an app called SportsSalesApp
+	-> python manage.py startapp SportsSalesApp
+
+6. Opened PyCharm and added 'SportsSalesApp' into INSTALLED_APPS section in settings.py
+	-> settings.py
+		-> INTSALLED_APPS
+			-> SportsSalesApp
+
+7. Opened PyCharm and started developing my database according to my ERD
+	-> code is in 'models.py'
+
+8. Upload the database by migrating it
+	-> python manage.py makemigrations
+	-> python manage.py migrate
+
+9. Open terminal in PyCharm and in the SportsSales directory where manage.py is visible create an admin user
+	-> python manage.py createsuperuser
+		-> Username: admin
+		-> Email address: admin@admin.com
+		-> Password: password
+		-> Password (again): password
+		-> This password is too common
+		-> Bypass password validation and create user anyway? [y/N]: y
+		-> Superuser created successfully
+
+10. Ran command to see Django database UI
+	-> python manage.py runserver
+
+11. Logged into Django with the user created above
+	-> Username: admin
+	-> Password: password
+
+12. In the User section of Django administration I added 4 other users
+	-> Username: user1
+	-> Email: user1@user1.com
+	-> Password: password
+
+	-> Username: manager1
+	-> Email: manager2@manager2.com
+	-> Password: password
+	
+	-> Username: staff3
+	-> Email: staff3@staff3.com
+	-> Password: password
+
+	-> Username: customer4
+	-> Email: customer4@customer4.com
+	-> Password: password
+
+13. I registered my models in admin.py in order to see them in the Django administration database
+
+14. I added 1 thing into Items, Orders, Order items, Payments, and Roles
+
+15. I made the database easier to read for the admin by adding dictionaries in the return of the double underscore method (dunder method)
+
+16 . I generated my fixtures from using the command
+	-> python manage.py dumpdata SportsSalesApp
+
+17. I extended user library to carry a role
+
+18. I Updated the database by migrating it
+	-> python manage.py makemigrations
+	-> python manage.py migrate
+
+19. I added 5 of each section to the fixtures folder in the data.json file
