@@ -13,25 +13,46 @@ def order(request):
     if request.method == "POST":
         item_id = request.POST.get('item_id')
 
-        user = User.objects.get(id=1)
+        user = request.user
 
-        new_order = Order.objects.last()
+        new_order = Order.objects.filter(user=request.user, status="Pending").first()
 
-        item = Item.objects.get(item_id=item_id)
-
-        existing = OrderItem.objects.filter(order=new_order, item=item).first()
-
-        if existing:
-            existing.quantity += 1
-            existing.save()
-        else:
-            OrderItem.objects.create(
-                order=new_order,
-                item=item,
-                quantity=1
+        if not new_order:
+            new_order = Order.objects.create(
+                user=request.user,
+                status="Pending",
+                date=datetime.date.today()
             )
 
-    orders = Order.objects.all()
+        if item_id:
+            item = Item.objects.get(pk = item_id)
+
+            existing = OrderItem.objects.filter(order = new_order, item = item).first()
+
+            if existing:
+                existing.quantity += 1
+                existing.save()
+            else:
+                OrderItem.objects.create(
+                    order = new_order,
+                    item = item,
+                    quantity = 1
+                )
+
+    profile = getattr(request.user, 'userprofile', None)
+
+    if not profile:
+        # create one automatically
+        profile = UserProfile.objects.create(user=request.user)
+
+    role = profile.role.name if profile.role else "Customer"
+    role = profile.role.name
+
+    if role in ["Admin", "Manager"]:
+        orders = Order.objects.all()
+    else:
+        orders = Order.objects.filter(user=request.user)
+
     return render(request, 'order.html', {'orders': orders})
 
 def home(request):
@@ -53,3 +74,17 @@ def update_order_status(request, order_id):
         return redirect('all_orders')
 
     return render(request, 'update_order.html', {'order': order})
+
+def checkout(request):
+    if request.method == "POST":
+        order_id = request.POST.get("order_id")
+
+        if not order_id:
+            return redirect("order")
+
+        order = Order.objects.get(order_id=order_id)
+
+        order.status = "Completed"
+        order.save()
+
+        return redirect("/order/")

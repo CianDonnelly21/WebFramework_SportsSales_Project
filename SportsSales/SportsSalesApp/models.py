@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 # Order
 # ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 class Order(models.Model):
-    order_id = models.IntegerField(primary_key = True)
+    order_id = models.AutoField(primary_key = True)
     user = models.ForeignKey(User, on_delete = models.CASCADE)
     date = models.DateField()
     status = models.CharField(max_length = 30)

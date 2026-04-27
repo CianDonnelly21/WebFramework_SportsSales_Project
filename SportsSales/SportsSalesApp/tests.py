@@ -1,4 +1,3 @@
-from Demos.win32ts_logoff_disconnected import username
 from django.test import TestCase
 from django.contrib.auth.models import User
 from .models import Item, Order, OrderItem

@@ -17,3 +17,15 @@ References:
 
 6. Django Documentation | Templates
 	-> https://docs.djangoproject.com/en/6.0/topics/templates/
+
+7. Django Documentation | Fixtures
+	-> https://docs.djangoproject.com/en/6.0/topics/db/fixtures/
+
+8. Geeks For Geeks | ERD Diagrams
+	-> https://www.geeksforgeeks.org/sql/how-to-draw-entity-relationship-diagrams/
+
+9. Geeks For Geeks | Use Case Diagrams
+	-> https://www.geeksforgeeks.org/system-design/use-case-diagram/
+
+10. Django Documentation | Writing and running tests
+	-> https://docs.djangoproject.com/en/6.0/topics/testing/overview/
