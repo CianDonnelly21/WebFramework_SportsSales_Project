@@ -80,7 +80,7 @@ def checkout(request):
         order_id = request.POST.get("order_id")
 
         if not order_id:
-            return redirect("order")
+            return redirect("/order/")
 
         order = Order.objects.get(order_id=order_id)
 
