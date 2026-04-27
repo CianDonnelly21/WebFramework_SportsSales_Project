@@ -11,3 +11,9 @@ References:
 
 4. Django Documentation | django-admin and manage.py
 	-> https://docs.djangoproject.com/en/6.0/ref/django-admin/#django-admin-dumpdata
+
+5. Django Documentation | URL dispatcher
+	-> https://docs.djangoproject.com/en/6.0/topics/http/urls/
+
+6. Django Documentation | Templates
+	-> https://docs.djangoproject.com/en/6.0/topics/templates/

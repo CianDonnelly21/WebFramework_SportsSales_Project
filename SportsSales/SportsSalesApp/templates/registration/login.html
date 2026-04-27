@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> SportsSalesApp </title>
+</head>
+<body>
+<form method="post">
+  {% csrf_token %}
+
+  {{ form.non_field_errors }}
+
+  <p>
+    Username: {{ form.username }}
+  </p>
+
+  <p>
+    Password: {{ form.password }}
+  </p>
+
+  <button type="submit">Login</button>
+
+    <form action="/logout/" method="post">
+  {% csrf_token %}
+  <button type="submit">Logout</button>
+</form>
+</form>
+</form>
+</body>
+</html>

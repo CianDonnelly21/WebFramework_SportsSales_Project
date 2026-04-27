@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> SportsSalesApp </title>
+</head>
+<body>
+    <h1>Update Order {{ order.order_id }}</h1>
+
+<form method="post">
+  {% csrf_token %}
+  <select name="status">
+    <option>Pending</option>
+    <option>Completed</option>
+    <option>Cancelled</option>
+    <option>Shipping</option>
+  </select>
+  <button type="submit">Update</button>
+</form>
+
+</body>
+</html>

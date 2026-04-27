@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> SportsSalesApp </title>
+</head>
+<body>
+    <h1>All Orders</h1>
+
+{% for order in orders %}
+  <p>
+    Order {{ order.order_id }} - {{ order.user }} - {{ order.status }}
+  </p>
+{% endfor %}
+
+<a href="/update-order/{{ order.order_id }}/">Update</a>
+
+</body>
+</html>

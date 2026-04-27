@@ -75,3 +75,14 @@ Steps:
 	-> python manage.py migrate
 
 19. I added 5 of each section to the fixtures folder in the data.json file
+
+20. Pushed current setup to GitHub
+
+21. I added order.html to templates folder
+
+22. I added html code for order in order.html and added python order code in views.py
+
+23. I added a link in urls.py for order.html
+
+24. I ran the command to load fixtures into the database
+	-> python manage.py loaddata data.json

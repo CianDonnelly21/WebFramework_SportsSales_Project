@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Sports Sales App </title>
+</head>
+<body>
+    <h1> Place Order </h1>
+    <form method = "post">
+        {% csrf_token %}
+        <button type = "submit"> Create Order </button>
+    </form>
+
+    <h2>Orders:</h2>
+
+{% for order in orders %}
+<div style="border:1px solid black; padding:15px; margin-bottom:20px; width:40%;">
+
+    <h3>Order {{ order.order_id }} - {{ order.status }}</h3>
+
+    {% for orderItem in order.orderitem_set.all %}
+        <p>- {{ orderItem.item.name }} (x{{ orderItem.quantity }})</p>
+    {% empty %}
+        <p>No items in this order</p>
+    {% endfor %}
+
+</div>
+{% endfor %}
+
+</body>
+</html>

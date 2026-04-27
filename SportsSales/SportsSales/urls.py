@@ -16,7 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.contrib.auth import views as auth_views
+from SportsSalesApp import views
 
 urlpatterns = [
+    path('', auth_views.LoginView.as_view(), name = 'home'),
     path('admin/', admin.site.urls),
+    path('order/', views.order),
+    path('orderItem/', views.OrderItem),
+    path('item/', views.items),
+    path('login/', auth_views.LoginView.as_view(redirect_authenticated_user = False), name = 'login'),
+    path('logout/', auth_views.LogoutView.as_view(http_method_names=['get', 'post']), name='logout'),    path('all-orders/', views.all_orders, name = 'all_orders'),
+path('update-order/<int:order_id>/', views.update_order_status, name='update_order')
 ]
